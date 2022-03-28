@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
+
 
 const TitleSection = styled.div`
     .main_title{
@@ -31,7 +34,7 @@ const Title = () => {
                     <h5>Open Source Tracking</h5>
                 </div>
                 <div className='signup_link'>
-                    <p>Don't have an account? <a href=''>Sign Up</a></p>
+                    <p>Don't have an account? <Link to = '/SignUp'>Sign Up</Link></p>
                 </div>
             </div>
         </TitleSection>

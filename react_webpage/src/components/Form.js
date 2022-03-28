@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const FormGroup = styled.div`
     .main_group{
@@ -39,7 +40,7 @@ const FormPage = () => {
                 </Form.Group>
                 <Form.Group className='login_info'>
                     <Form.Check type='checkbox' label='Remeber Me'/>
-                    <a href=''>Forgot your password?</a>
+                    <Link to = '/ForgotPassword'>Forgot your password?</Link>
                 </Form.Group>
                 <Form.Group className='mb-3 btn_group'>
                     <Button className='submit_btn' onClick=''>Sign In</Button>
