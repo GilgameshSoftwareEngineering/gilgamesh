@@ -2,15 +2,27 @@ import React from 'react';
 import { Table } from 'react-bootstrap'; 
 import "./ClientSide.css"
 import Button from 'react-bootstrap/Button';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from 'react-bootstrap/Dropdown';
 import "./AdminSide.css"
 
 function ClientSide() {
   return(
   <><div style={{}}>
-  <div style ={{paddingLeft: 600, fontSize: 50, font: 'sans-serif'}}>
+  <div style ={{paddingLeft: 600, fontSize: 50}}>
   Open Source Tracking System
   </div>
 </div>
+
+  <div >
+<DropdownButton id="dropdown-basic-button" title="Filter Results">
+  <Dropdown.Item href="#/action-1">License</Dropdown.Item>
+  <Dropdown.Item href="#/action-2">State</Dropdown.Item>
+  <Dropdown.Item href="#/action-3">Date Requested</Dropdown.Item>
+  <Dropdown.Item href="#/action-4">Date Approved</Dropdown.Item>
+</DropdownButton>
+</div>
+
   <div>
   <Table striped bordered hover>
     <thead>
@@ -23,6 +35,7 @@ function ClientSide() {
       <th>Status</th>
       <th>Date Checked</th>
       <th>Project URL</th>
+      <th>View Request</th>
       </tr>
     </thead>
     <tbody>
@@ -35,6 +48,7 @@ function ClientSide() {
         <td>Approved</td>
         <td>09/15/2022</td>
         <td>URL</td>
+        <td><Button variant="secondary">View Request</Button></td>
       </tr>
       <tr>
         <td>Ray Bach</td>
@@ -45,6 +59,7 @@ function ClientSide() {
         <td>Denied</td>
         <td>09/22/2022</td>
         <td>URL</td>
+        <td><Button variant="secondary">View Request</Button></td>
       </tr>
       <tr>
         <td>Larry Smith</td>
@@ -55,12 +70,16 @@ function ClientSide() {
         <td>Pending</td>
         <td>10/5/2022</td>
         <td>URL</td>
+        <td><Button variant="secondary">View Request</Button></td>
       </tr>
     </tbody>
   </Table>
   </div>
+
+
+
   <div style={{}}>
-  <div style ={{paddingLeft: 825}}>
+  <div style ={{paddingLeft: 820}}>
   <Button variant="primary" size="lg">
     Add New Project
   </Button>
@@ -70,12 +89,5 @@ function ClientSide() {
   );
 }
 
-// function text(){
-//   return(
-//   <div class = "text-container">
-//     <p>Open Source Tracking System</p>
-//   </div>
-//   )
-// }
 
 export default ClientSide;

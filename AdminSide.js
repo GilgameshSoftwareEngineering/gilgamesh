@@ -5,8 +5,8 @@ import image from '../commerce4.png';
 import Button from 'react-bootstrap/Button';
 import { Table } from 'react-bootstrap'; 
 import { render } from '@testing-library/react';
-//import { render } from '@testing-library/react';
-//import React, {useState} from 'react';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 
 function AdminSide() {
@@ -16,6 +16,16 @@ return(
     Open Source Tracking System
     </div>
   </div>
+
+  <div >
+<DropdownButton id="dropdown-basic-button" title="Filter Results">
+  <Dropdown.Item href="#/action-1">License</Dropdown.Item>
+  <Dropdown.Item href="#/action-2">State</Dropdown.Item>
+  <Dropdown.Item href="#/action-3">Date Requested</Dropdown.Item>
+  <Dropdown.Item href="#/action-4">Date Approved</Dropdown.Item>
+</DropdownButton>
+</div>
+
   <div>
     <Table striped bordered hover>
       <thead>
@@ -68,6 +78,8 @@ return(
       </tbody>
     </Table>
   </div>
+
+
   <div style={{}}>
   <div style ={{paddingLeft: 820}}>
   <Button variant="primary" size="lg">
