@@ -11,7 +11,12 @@ import { render } from '@testing-library/react';
 
 function AdminSide() {
 return(
-  <><div>
+  <><div style={{}}>
+    <div style ={{paddingLeft: 600, fontSize: 50}}>
+    Open Source Tracking System
+    </div>
+  </div>
+  <div>
     <Table striped bordered hover>
       <thead>
         <tr>

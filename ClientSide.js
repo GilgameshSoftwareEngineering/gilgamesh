@@ -6,7 +6,12 @@ import "./AdminSide.css"
 
 function ClientSide() {
   return(
-  <><div>
+  <><div style={{}}>
+  <div style ={{paddingLeft: 600, fontSize: 50, font: 'sans-serif'}}>
+  Open Source Tracking System
+  </div>
+</div>
+  <div>
   <Table striped bordered hover>
     <thead>
       <tr>
