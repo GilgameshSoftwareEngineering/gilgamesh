@@ -5,8 +5,18 @@ import Button from 'react-bootstrap/Button';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 import "./AdminSide.css"
+import { useHistory } from 'react-router-dom';
 
 function ClientSide() {
+  const history = useHistory();
+
+  const redirect = () => {
+    history.push('/rcreate');
+  }
+  const redirectView = () => {
+    history.push('/cview');
+  }
+
   return(
   <><div style={{}}>
   <div style ={{paddingLeft: 600, fontSize: 50}}>
@@ -48,7 +58,7 @@ function ClientSide() {
         <td>Approved</td>
         <td>09/15/2022</td>
         <td>URL</td>
-        <td><Button variant="secondary">View Request</Button></td>
+        <td><Button onClick={redirectView} variant="secondary">View Request</Button></td>
       </tr>
       <tr>
         <td>Ray Bach</td>
@@ -59,7 +69,7 @@ function ClientSide() {
         <td>Denied</td>
         <td>09/22/2022</td>
         <td>URL</td>
-        <td><Button variant="secondary">View Request</Button></td>
+        <td><Button onClick={redirectView} variant="secondary">View Request</Button></td>
       </tr>
       <tr>
         <td>Larry Smith</td>
@@ -70,7 +80,7 @@ function ClientSide() {
         <td>Pending</td>
         <td>10/5/2022</td>
         <td>URL</td>
-        <td><Button variant="secondary">View Request</Button></td>
+        <td><Button onClick={redirectView} variant="secondary">View Request</Button></td>
       </tr>
     </tbody>
   </Table>
@@ -80,7 +90,7 @@ function ClientSide() {
 
   <div style={{}}>
   <div style ={{paddingLeft: 820}}>
-  <Button variant="primary" size="lg">
+  <Button onClick={redirect} variant="primary" size="lg">
     Add New Project
   </Button>
 </div>
